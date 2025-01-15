@@ -1,10 +1,11 @@
+pip install openai==0.28
+
 import streamlit as st
 import openai
 import os
 
 # OpenAI APIキーの設定
 openai.api_key = "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"
-openai migrate
 
 # スタイルのカスタマイズ
 st.markdown("""
