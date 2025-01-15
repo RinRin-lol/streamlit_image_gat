@@ -105,8 +105,5 @@ with col2:
         else:
             st.warning("キーワードを入力してください！")
 
-st.markdown('<div class="h2_2">↓因みに、上の例のプロンプトを入力するとこんな感じに生成されました(一例)</div>', unsafe_allow_html=True)
-st.image("C:/Users/seirintarou/example_meiji.jpg")
-
 # フッター
 st.markdown('<div class="footer">© 2025 明治イメージ生成アプリ - Powered by Streamlit & OpenAI</div>', unsafe_allow_html=True)
