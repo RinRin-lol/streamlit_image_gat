@@ -2,8 +2,11 @@ import streamlit as st
 import openai
 import os
 
-# OpenAI APIキーの設定
-openai.api_key = "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"
+# secrets.tomlファイルからAPIキーを取得
+api_key = st.secrets["openai"]["api_key"]
+
+# OpenAI APIに接続
+openai.api_key = api_key
 
 # スタイルのカスタマイズ
 st.markdown("""
@@ -104,6 +107,9 @@ with col2:
                 st.error(f"画像生成中にエラーが発生しました: {e}")
         else:
             st.warning("キーワードを入力してください！")
+
+st.markdown('<div class="h2_2">↓因みに、上の例のプロンプトを入力するとこんな感じに生成されました(一例)</div>', unsafe_allow_html=True)
+st.image("C:/Users/seirintarou/example_meiji.jpg")
 
 # フッター
 st.markdown('<div class="footer">© 2025 明治イメージ生成アプリ - Powered by Streamlit & OpenAI</div>', unsafe_allow_html=True)
